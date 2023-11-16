@@ -36,13 +36,13 @@ const themes = {
 
 const ThemeContext = React.createContext(themes.light);
 
-function App() {
-  return (
-    <ThemeContext.Provider value={themes.dark}>
-      <Toolbar />
-    </ThemeContext.Provider>
-  );
-}
+// function App() {
+//   return (
+//     <ThemeContext.Provider value={themes.dark}>
+//       <Toolbar />
+//     </ThemeContext.Provider>
+//   );
+// }
 
 function Toolbar(props) {
   return (
