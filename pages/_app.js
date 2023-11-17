@@ -3,38 +3,38 @@ import { useEffect, useState, createContext } from "react";
 
 export const LiffContext = createContext({});
 
-const Counter = ({initialCount}) => {
-  const [count, setCount] = useState(initialCount);
-  return (
-    <>
-      Count: {count}
-      <button onClick={() => setCount(initialCount)}>Reset</button>
-      <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
-      <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
-    </>
-  );
-}
+// const Counter = ({initialCount}) => {
+//   const [count, setCount] = useState(initialCount);
+//   return (
+//     <>
+//       Count: {count}
+//       <button onClick={() => setCount(initialCount)}>Reset</button>
+//       <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+//       <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+//     </>
+//   );
+// }
 
-useEffect(
-  () => {
-    updateData()
-    setLoad(false)
-  },
-  [load],
-);
+// useEffect(
+//   () => {
+//     updateData()
+//     setLoad(false)
+//   },
+//   [load],
+// );
 
-const themes = {
-  light: {
-    foreground: "#000000",
-    background: "#eeeeee"
-  },
-  dark: {
-    foreground: "#ffffff",
-    background: "#222222"
-  }
-};
+// const themes = {
+//   light: {
+//     foreground: "#000000",
+//     background: "#eeeeee"
+//   },
+//   dark: {
+//     foreground: "#ffffff",
+//     background: "#222222"
+//   }
+// };
 
-const ThemeContext = React.createContext(themes.light);
+// const ThemeContext = React.createContext(themes.light);
 
 // function App() {
 //   return (
@@ -44,22 +44,22 @@ const ThemeContext = React.createContext(themes.light);
 //   );
 // }
 
-function Toolbar(props) {
-  return (
-    <div>
-      <ThemedButton />
-    </div>
-  );
-}
+// function Toolbar(props) {
+//   return (
+//     <div>
+//       <ThemedButton />
+//     </div>
+//   );
+// }
 
-function ThemedButton() {
-  const theme = useContext(ThemeContext);
-  return (
-    <button style={{ background: theme.background, color: theme.foreground }}>
-      I am styled by theme context!
-    </button>
-  );
-}
+// function ThemedButton() {
+//   const theme = useContext(ThemeContext);
+//   return (
+//     <button style={{ background: theme.background, color: theme.foreground }}>
+//       I am styled by theme context!
+//     </button>
+//   );
+// }
 
 export default function App({ Component, pageProps }) {
   // [liffObject, profile]
